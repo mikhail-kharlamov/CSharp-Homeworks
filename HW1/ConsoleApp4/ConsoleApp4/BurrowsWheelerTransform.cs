@@ -1,4 +1,5 @@
 namespace BurrowsWheeler;
+
 public class BurrowsWheelerTransform
 {
     public static (string, int) StraightTransform(string input)
