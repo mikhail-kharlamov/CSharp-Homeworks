@@ -1,11 +1,14 @@
-namespace ArchiverLZW;
+using System.Diagnostics;
+
+namespace AlgorithmLZW;
 
 using TrieDataStructure;
+using BurrowsWheeler;
 using System.Text;
 
 public class LempelZivWelchAlgorithm
 {
-    public static byte[] Encode(byte[] text)
+    public static byte[] Encode(byte[] text, bool transformation = true)
     {
         var table = new Trie();
         var currentString = string.Empty; 
@@ -14,8 +17,20 @@ public class LempelZivWelchAlgorithm
         {
             table.Add(((char)i).ToString());
         }
+
+    
+        var stringText = string.Join("", text.Select(number => (char)number));
+        var isTransformed = Convert.ToInt32(transformation);
+        var originalIndex = 0;
+        if (transformation)
+        {
+            (stringText, originalIndex) = BurrowsWheelerTransform.StraightTransform(stringText);
+        }
         
-        foreach (var letter in text.Select(number => (char)number))
+        stream.Add(isTransformed);
+        stream.Add(originalIndex);
+        
+        foreach (var letter in stringText)
         {
             if (table.Contains(currentString + letter) != 0)
             {
@@ -46,16 +61,33 @@ public class LempelZivWelchAlgorithm
         }
         
         var stream = FromBytes(bytes);
+        var isTransformed = stream[0];
+        var originalIndex = stream[1];
+        stream.RemoveAt(0);
+        stream.RemoveAt(0);
+        
         foreach (var number in stream)
         {
+            if (number == 261)
+            {
+                var sosal = "sosal?";
+            }
             var element = table.GetElementByNumber(number);
+            if (string.IsNullOrEmpty(element))
+            {
+                element = currentString[0].ToString();
+                originalFile += currentString;
+                currentString += element;
+                table.Add(currentString);
+                continue;
+            }
             if (table.Contains(currentString + element) != 0)
             {
                 currentString += element;
                 continue;
             }
-            table.Add(currentString + element[0]);
             originalFile += currentString;
+            table.Add(currentString + element[0]);
             currentString = element;
         }
 
@@ -64,6 +96,12 @@ public class LempelZivWelchAlgorithm
             originalFile += currentString;
         }
 
+
+        if (isTransformed == 1)
+        {
+            originalFile = BurrowsWheelerTransform.InverseTransform(originalFile, originalIndex);
+        }
+        
         return Encoding.ASCII.GetBytes(originalFile);
     }
 
@@ -98,4 +136,6 @@ public class LempelZivWelchAlgorithm
         
         return stream;
     }
+    
+    private static BurrowsWheelerTransform _transform = new();
 }

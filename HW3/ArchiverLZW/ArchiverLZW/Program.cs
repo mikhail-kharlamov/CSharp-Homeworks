@@ -1,4 +1,7 @@
-﻿namespace ArchiverLZW;
+﻿namespace Archiver;
+
+using BurrowsWheeler;
+using AlgorithmLZW;
 
 public class Archiver
 {
@@ -42,7 +45,7 @@ public class Archiver
             var compressionCoefficient = (float)bytesStream.Length / encodedBytes.Length;
             try
             {
-                File.WriteAllBytes(outputFilePath + ".zipped", encodedBytes);
+                File.WriteAllBytes(outputFilePath += ".zipped", encodedBytes);
                 Console.WriteLine($"Successfully encoded and saved to {outputFilePath}");
                 Console.WriteLine($"Compression Coefficient: {compressionCoefficient}");
             }

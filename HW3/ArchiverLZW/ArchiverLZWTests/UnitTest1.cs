@@ -1,8 +1,6 @@
-﻿using TrieDataStructure;
+﻿namespace AlgorithmLZW.Tests;
 
-namespace ArchiverLZW.Tests;
-
-using ArchiverLZW;
+using AlgorithmLZW;
 using TrieDataStructure;
 using System.Text;
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArchiverLZWTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e5f3306f453b038cdc312072a6beccba5434cc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+613182f72b4f10610f09097f2bd7b90f25adecac")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArchiverLZWTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArchiverLZWTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
