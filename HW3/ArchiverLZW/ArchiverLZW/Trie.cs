@@ -39,7 +39,7 @@ public class Trie
     /// Checks is the element in trie.
     /// </summary>>
     /// <param name="element">Element to check.</param>
-    /// <returns>True if element in trie.</returns>
+    /// <returns>Number in the last node of element. Zero if trie doesn't contain it.</returns>
     public int Contains(string element)
     {
         var node = this._root;
@@ -139,6 +139,11 @@ public class Trie
         return counter;
     }
 
+    /// <summary>
+    /// Method for getting element by number in the last node of this element.
+    /// </summary>>
+    /// <param name="number">Number in the last node of this element.</param>
+    /// <returns>Element in trie.</returns>
     public string GetElementByNumber(int number)
     {
         var element = GetElementByNumberRecursive(number, this._root);

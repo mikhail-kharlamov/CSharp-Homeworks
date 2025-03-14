@@ -1,8 +1,10 @@
 ﻿namespace Archiver;
 
-using BurrowsWheeler;
 using AlgorithmLZW;
 
+/// <summary>
+/// The main class for connection with user in console.
+/// </summary>>
 public class Archiver
 {
     public static void Main(string[] args)

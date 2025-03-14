@@ -1,7 +1,15 @@
 namespace BurrowsWheeler;
 
+/// <summary>
+/// Class for algorithm of Burrows-Wheeler transform.
+/// </summary>>
 public class BurrowsWheelerTransform
 {
+    /// <summary>
+    /// Method for straight BWT transform.
+    /// </summary>>
+    /// <param name="input">Original string.</param>
+    /// <returns>The pair of transformed string and number of the original string in table.</returns>
     public static (string, int) StraightTransform(string input)
     {
         if (string.IsNullOrEmpty(input))
@@ -30,7 +38,13 @@ public class BurrowsWheelerTransform
 
         return (output, indexOfOriginalString);
     }
-
+    
+    /// <summary>
+    /// Method for inverse BWT transform.
+    /// </summary>>
+    /// <param name="transformedText">Transformed text for inverse BWT transform.</param>
+    /// <param name="indexOfOriginalString">Number of the original string in table.</param>
+    /// <returns>Original string.</returns>
     public static string InverseTransform(string transformedText, int indexOfOriginalString)
     {
         if (string.IsNullOrEmpty(transformedText) || transformedText.Length <= indexOfOriginalString ||

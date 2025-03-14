@@ -6,8 +6,17 @@ using TrieDataStructure;
 using BurrowsWheeler;
 using System.Text;
 
+/// <summary>
+/// Class of Lempel-Ziv-Welch algorithm.
+/// </summary>>
 public class LempelZivWelchAlgorithm
 {
+    /// <summary>
+    /// Compress information.
+    /// </summary>>
+    /// <param name="text">information to compress.</param>
+    /// <param name="transformation">True or false in dependence of should it use BWT-transform.</param>
+    /// <returns>Compressed information in bytes.</returns>
     public static byte[] Encode(byte[] text, bool transformation = true)
     {
         var table = new Trie();
@@ -50,6 +59,11 @@ public class LempelZivWelchAlgorithm
         return ToBytes(stream);
     }
 
+    /// <summary>
+    /// Decompress information.
+    /// </summary>>
+    /// <param name="bytes">Compressed information for decompress.</param>
+    /// <returns>Decompressed information in bytes.</returns>
     public static byte[] Decode(byte[] bytes)
     {
         var table = new Trie();
@@ -68,10 +82,6 @@ public class LempelZivWelchAlgorithm
         
         foreach (var number in stream)
         {
-            if (number == 261)
-            {
-                var sosal = "sosal?";
-            }
             var element = table.GetElementByNumber(number);
             if (string.IsNullOrEmpty(element))
             {
@@ -111,7 +121,7 @@ public class LempelZivWelchAlgorithm
         
         foreach (var code in stream)
         {
-            var byte1 = (byte)((code >> 8) & 0xFF); // AAAA AAAA BBBB BBBB
+            var byte1 = (byte)((code >> 8) & 0xFF);
             var byte2 = (byte)(code & 0xFF);
             bytes.Add(byte1);
             bytes.Add(byte2);
