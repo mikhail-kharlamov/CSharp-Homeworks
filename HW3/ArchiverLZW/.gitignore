@@ -29,6 +29,7 @@ packages/
 
 # OS generated files # Операционные системы
 .DS_Store # macOS
+ArchiverLZW/.DS_Store
 Thumbs.db # Windows
 
 # Temporary files
