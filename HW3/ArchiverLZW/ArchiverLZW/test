@@ -1,0 +1,150 @@
+The LZW algorithm
+The immediate predecessor of LZW is the LZ78 algorithm, published by Abraham Lempel and Jacob Ziv in 1978. This algorithm was perceived as a mathematical abstraction until 1984, when Terry A. Welch published his work with a modified algorithm, later called LZW (Lempel???Ziv???Welch).
+
+Content
+1 Application
+2 Description
+3 Algorithm
+3.1 Coding
+3.2 Decoding
+4 Example
+4.1 Coding
+4.2 Decoding
+4.3 Note
+4.4 Advantages of the LZW algorithm
+4.5 Disadvantages of the LZW algorithm
+5 Sources of information
+Application
+The publication of the LZW algorithm made a great impression on all information compression specialists. This was followed by a large number of programs and applications with various variants of this method.
+
+This method allows you to achieve one of the best compression rates among other existing methods of compressing graphic data, with complete absence of loss or distortion in the source files. It is currently used in TIFF, PDF, GIF, PostScript and other format files, as well as partly in many popular data compression programs (ZIP, ARJ, LHA).
+
+Description
+The compression process is as follows: the characters of the input stream are sequentially read and it is checked whether such a row exists in the created row table. If such a string exists, the next character is read, and if the string does not exist, the code for the previous found string is entered into the stream, the string is entered into the table, and the search begins again.
+
+For example, if byte data (text) is compressed, then there will be 256 rows in the table (from "0" to "255"). If a 10-bit code is used, then values in the range from 256 to 1023 remain for the string codes. New rows form a table sequentially, i.e. the row index can be considered its code.
+
+For decoding, only encoded text is sent to the input, since the LZW algorithm can recreate the corresponding conversion table directly from the encoded text. The algorithm generates a uniquely decodable code due to the fact that each time a new code is generated, a new row is added to the row table. LZW constantly checks whether the string is already known, and if so, outputs the existing code without generating a new one. This way, each row will be stored in a single instance and have its own unique number. Therefore, when decoding a new code, a new string is generated, and when an already known string is received, the string is extracted from the dictionary.
+
+Algorithm
+Coding
+Beginning.
+Step 1. All possible characters are entered into the dictionary. The first character of the message is entered into the input phrase X.
+Step 2. Read the next Y character from the message.
+Step 3. If Y is the end of message symbol, then give the code for X, otherwise:
+If the phrase XY is already in the dictionary, then assign the input phrase the value XY and proceed to Step 2. ,
+Otherwise, give the code for the input phrase X, add XY to the dictionary, and assign the input phrase the value Y. Go to Step 2.
+End.
+Decoding
+Beginning.
+Step 1. All possible characters are entered into the dictionary. The first code of the decoded message is entered into the input phrase X.
+Step 2. Read the next Y code from the message.
+Step 3. If Y is the end of the message, then output the character corresponding to the X code, otherwise:
+If the phrase with code XY is not in the dictionary, print the phrase corresponding to code X, and enter the phrase with code XY in the dictionary.
+Otherwise, assign the XY code to the input phrase and proceed to Step 2 .
+End.
+Example
+Let's look at an example of compressing and decoding a message. First, let's create an initial dictionary of single characters. There are 256 different characters in the standard ASCII encoding, so in order for all of them to be encoded correctly (if we don't know which characters will be present in the source file and which ones won't), the initial code size will be 8 bits. If we know in advance that there will be fewer different characters in the source file, then it is quite reasonable to reduce the number of bits. To initialize the table, we will match code 0 to the corresponding character with the bit code 00000000, then 1 corresponds to the character with the code 00000001, and so on, up to code 255.
+
+Character Bit code Code
+a 000 0
+b	001	1
+c	010	2
+d	011	3
+e	100	4
+There will be no other codes in the table with this property anymore.
+As the dictionary grows, the size of the groups should grow in order to accommodate new elements. 8-bit groups give 256 possible combinations of bits, so when the 256th word appears in the dictionary, the algorithm should switch to 9-bit groups. When the 512-th word appears, it will switch to 10-bit groups, which makes it possible to memorize 1024 words, etc.
+
+In our example, the algorithm knows in advance that only 5 different characters will be used, therefore, the minimum number of bits will be used to store them, that is, 3 (8 different combinations).
+
+Coding
+Let's compress the sequence abacabadabacabae.
+
+Step 1: Then, according to the algorithm described above, we will add row a to the initially empty row and check if row a is in the table. Since we entered all rows of one character in the table during initialization, row a is in the table.
+Step 2: Next, we read the next character b from the input stream and check if there is a row ab in the table. There is no such row in the table yet.
+Adding ???5??? ab to the table. To stream: ???0???;
+
+Step 3: ba ??? no. In the table: ???6??? ba. To stream: ???1???;
+Step 4: ac ??? no. In the table: ???7??? ac. To stream: ???0???;
+Step 5: ca ??? no. In the table: ???8??? ca. To stream: ???2???;
+Step 6: ab is in the table; aba is not. In the table: ???9??? aba. To stream: ???5???;
+Step 7: ad ??? no. In the table: ???10??? ad. To stream: ???0???;
+Step 8: da ??? no. In the table: ???11??? da. To stream: ???3???;
+Step 9: aba is in the table; abac is not. In the table: ???12??? abac. To stream: ???9???;
+Step 10: ca is in the table; cab is not. In the table: ???13??? cab. To stream: ???8???;
+Step 11: ba is in the table; bae is not. In the table: ???14??? bae. To stream: ???6???;
+Step 12: And finally the last line of e, followed by the end of the message, so we just output ???4??? to the stream.
+Current String Current character Next character Output Dictionary
+Bit Code
+ab a b 0 000 5: ab
+ba	b	a	1	001	6:	ba
+ac	a	c	0	000	7:	ac
+ca	c	a	2	010	8:	ca
+ab	a	b	-	-	-	-
+aba	b	a	5	0101	9:	aba
+ad	a	d	0	0000	10:	ad
+da	d	a	3	0011	11:	da
+ab	a	b	-	-	-	-
+aba	b	a	-	-	-	-
+abac	a	c	9	1001	12:	abac
+ca	c	a	-	-	-	-
+cab	a	b	8	1000	13:	cab
+ba	b	a	-	-	-	-
+bae	a	e	6	0110	14:	bae
+e	e	-	4	0100	-	-
+So, we get the encoded message 01025039864 and its bit equivalent 0000010000100101000000111001100001100100. Each character of the original message was encoded with a group of three bits, the message contained 16 characters, therefore the message length was 316=48 bits.
+
+The encoded message was also first encoded in three???bit groups, and when the eighth word appeared in the dictionary, it was four-bit, making the total message length 4.3+7.4=40 bits, which is 8 bits shorter than the original one.
+
+Decoding
+The special feature of LZW is that for decompression we do not need to save the row table to the decompression file. The algorithm is built in such a way that we are able to restore the row table using only the code stream.
+
+Now imagine that we have received the encoded message shown above, and we need to decode it. First of all, we need to know the initial dictionary, and we can reconstruct subsequent dictionary entries on the fly, since they are just a concatenation of previous entries. In addition, during encoding and decoding, codes are added to the dictionary during the processing of the same character, i.e. it happens ???synchronously".
+
+
+
+The output data is a new record
+Bits Code Full Partial
+000	0	a	-	-	5:	a?
+001	1	b	5:	ab	6:	b?
+000	0	a	6:	ba	7:	a?
+010	2	c	7:	ac	8:	c?
+0101	5	ab	8:	ca	9:	ab?
+0000	0	a	9:	aba	10:	a?
+0011	3	d	10:	ad	11:	d?
+1001	9	aba	11:	da	12:	aba?
+1000 8 ca 12: abac 13: ca?
+0110 6 ba 13: cab 14: ba?
+0100 4 e 14: bae - -
+Note
+To increase the degree of image compression by this method, one ???trick" of implementing this algorithm is often used. Some files compressed with LZW often have strings of identical characters, such as aaaaaaaaaaaaa... or 303030 ... etc. Their direct compression will generate the output code 005000600007.... The question is, is it possible to increase the compression ratio in this particular case?
+
+It turns out that this is possible if you specify some actions.:
+
+We know that for each code, we need to add a row to the table, consisting of the line already present there and the character from which the next line in the stream begins.
+
+Let the dictionary consist of words : a,b,c,d,e. We will encode the string aaaaaaaaaa
+So, the encoder enters the first a into the string, searches and finds an a in the dictionary with the number ???0???. Adds the following a to the string, finds that aa is not in the dictionary. Then it adds the entry ???5???:aa to the dictionary and outputs the label ???0???(a) to the output stream.
+Next, the string is initialized to the second a, that is, it takes the form a? the third a is entered, the string is again equal to aa, which is now available in the dictionary.
+If the fourth a appears, then the row is aa? it is equal to aaa, which is not in the dictionary. The dictionary is updated with this line, and the output is marked ???5??? (aa).
+After that, the string is initialized with the third a, etc. etc. The further process is quite clear.
+Operation of the LZW algorithm
+The word Number in the dictionary
+is a ???0???
+b	???1???
+c	???2???
+d	???3???
+e	???4???
+Current String Current character Next character Output Dictionary
+Code Bits
+aa	a	a	0	000	5:	aa
+aa	a	a	-	-	-	-
+aaa	a	a	5	101	6:	aaa
+a	a	a	-	-	-	-
+aa	a	a	-	-	-	-
+aaa	a	a	-	-	-	-
+aaaa	a	a	6	110	7:	aaaa
+a	a	a	-	-	-	-
+aa	a	a	-	-	-	-
+aaa	a	a	-	-	-	-
+aaaa	a	a	7	111	8:	aaaaa
