@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniqueList", "UniqueList\UniqueList.csproj", "{D537230C-BA24-4D38-8F36-DEB88772C40C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniqueList.Tests", "UniqueList.Tests\UniqueList.Tests.csproj", "{67525A8F-60EF-433B-B0FB-AB372A6F1CF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D537230C-BA24-4D38-8F36-DEB88772C40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D537230C-BA24-4D38-8F36-DEB88772C40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D537230C-BA24-4D38-8F36-DEB88772C40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D537230C-BA24-4D38-8F36-DEB88772C40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67525A8F-60EF-433B-B0FB-AB372A6F1CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67525A8F-60EF-433B-B0FB-AB372A6F1CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67525A8F-60EF-433B-B0FB-AB372A6F1CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67525A8F-60EF-433B-B0FB-AB372A6F1CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
