@@ -15,14 +15,18 @@ public class Routers
 
         try
         {
+            List<string> file = new();
+            
             using (var reader = new StreamReader(fileToRead))
             {
                 var line = string.Empty;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    Console.WriteLine(line);
+                    file.Add(line);
                 }
             }
+
+            var adjacencyList = AdjacencyListExtractor.ExtractAdjacencyList(file);
         }
         catch (FileNotFoundException)
         {
