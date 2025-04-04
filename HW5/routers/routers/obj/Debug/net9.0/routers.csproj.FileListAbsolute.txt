@@ -1,0 +1,15 @@
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.AssemblyInfoInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.AssemblyInfo.cs
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.csproj.CoreCompileInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.sourcelink.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/bin/Debug/net9.0/routers
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/bin/Debug/net9.0/routers.deps.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/bin/Debug/net9.0/routers.runtimeconfig.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/bin/Debug/net9.0/routers.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/bin/Debug/net9.0/routers.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/refint/routers.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/routers.genruntimeconfig.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/obj/Debug/net9.0/ref/routers.dll

@@ -1,5 +1,10 @@
 ﻿namespace Routers;
 
+using UndirectedGraph;
+using UndirectedGraphExtractor;
+using Algorithms;
+using FileWriter;
+
 public class Routers
 {
     public static void Main(string[] args)
@@ -26,7 +31,9 @@ public class Routers
                 }
             }
 
-            var adjacencyList = AdjacencyListExtractor.ExtractAdjacencyList(file);
+            var undirectedGraph = UndirectedGraphExtractor.Extract(file);
+            var minimumSpanningTree = AlgorithmOfPrim.GetMinimumSpanningTree(undirectedGraph);
+            FileWriter.WriteUndirectedGraphToFile(fileToWrite, minimumSpanningTree);
         }
         catch (FileNotFoundException)
         {
