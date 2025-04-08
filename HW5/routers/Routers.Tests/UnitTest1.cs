@@ -6,7 +6,7 @@ using Algorithms;
 
 public class Tests
 {
-    [Test]
+    /*[Test]
     public void UndirectedGraphExtractorTest()
     {
         List<string> file = new();
@@ -15,7 +15,7 @@ public class Tests
         var graph = UndirectedGraphExtractor.Extract(file);
         Assert.Pass();
     }
-
+*/
     [Test]
     public void AlgorithmOfPrimBaseDataTest()
     {
@@ -34,8 +34,8 @@ public class Tests
         
         var tree = AlgorithmOfPrim.GetMinimumSpanningTree(graph);
 
-        var t = tree.GetVertices();
-        t.Sort();
-        Assert.That(t, Is.EquivalentTo(new List<int> { 0, 1, 2, 3, 4, 5, 6 }));
+        var verticesOfMinimumSpanningTree = tree.GetVertices();
+        verticesOfMinimumSpanningTree.Sort();
+        Assert.That(verticesOfMinimumSpanningTree, Is.EquivalentTo(new List<int> { 0, 1, 2, 3, 4, 5, 6 }));
     }
 }

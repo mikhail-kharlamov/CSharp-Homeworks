@@ -7,29 +7,33 @@ public class AlgorithmOfPrim
     public static UndirectedGraph GetMinimumSpanningTree(UndirectedGraph undirectedGraph)
     {
         var tree = new UndirectedGraph();
+        var vertices = undirectedGraph.GetVertices();
         
-        var adjacencyList = undirectedGraph.GetAdjacencyList();
+        if (vertices.Count == 0) return tree;
 
-        List<(int, int)> spanningTreeNearbyVertices = new();
-
-        //var vertex = undirectedGraph.GetVertices()[0];
-
-        var vertex = 3;
+        List<(int, int, int)> spanningTreeNearbyVertices = new();
         
-        tree.AddVertex(vertex);
-        
-        for (var i = 0; i < adjacencyList.Count; i++)
+        tree.AddVertex(vertices[0]);
+
+        while (tree.GetVertices().Count < vertices.Count)
         {
-            foreach (var addedVertex in tree.GetVertices())
+            foreach (var vertex in tree.GetVertices())
             {
-                spanningTreeNearbyVertices.RemoveAll(x => x.Item1 == addedVertex);
+                foreach (var edge in undirectedGraph.GetNeighbors(vertex))
+                {
+                    if (!tree.GetVertices().Contains(edge.Item1))
+                    {
+                        spanningTreeNearbyVertices.Add((vertex, edge.Item1, edge.Item2));
+                    }
+                }
             }
-            var nearbyVertices  = adjacencyList[vertex];
-            spanningTreeNearbyVertices.AddRange(nearbyVertices);
-            vertex = spanningTreeNearbyVertices.Aggregate((first, second) => 
-                first.Item2 < second.Item2 && !undirectedGraph.GetVertices().Contains(first.Item1)? first : second).Item1;
             
-            tree.AddVertex(vertex); //TODO уточнить алгоритм
+            if (!spanningTreeNearbyVertices.Any()) break;
+            
+            var minimalEdge = spanningTreeNearbyVertices.OrderBy(x => x.Item3).First();
+            tree.AddEdge(minimalEdge.Item1, minimalEdge.Item2, minimalEdge.Item3);
+            
+            spanningTreeNearbyVertices.Clear();
         }
         
         return tree;

@@ -47,11 +47,29 @@ public class UndirectedGraph
         }
         
         this.Edges[(vertex1, vertex2)] = weight;
-        this.Edges[(vertex2, vertex1)] = weight;
+        this.Edges[(vertex2, vertex1)] = weight; //поправить
         
         this.AdjacencyList[vertex1].Add((vertex2, weight));
         this.AdjacencyList[vertex2].Add((vertex1, weight));
         
+    }
+
+    public List<(int, int)> GetNeighbors(int vertex)
+    {
+        List<(int, int)> neighbors = new();
+        foreach (var edge in Edges.Keys)
+        {
+            if (edge.Item1 == vertex)
+            {
+                neighbors.Add((edge.Item2, Edges[edge]));
+            }
+            else if (edge.Item2 == vertex)
+            {
+                neighbors.Add((edge.Item1, Edges[edge]));
+            }
+        }
+        
+        return neighbors;
     }
 
     public List<int> GetVertices()
