@@ -23,7 +23,10 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.0.x
-
+        
+    - name: Make script executable
+      run: chmod +x build-and-test.sh
+      
     - name: Build
       run: ${{ matrix.build-script }} build
 
