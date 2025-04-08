@@ -1,42 +1,34 @@
-name: .NET CI
+name: Build
 
 on:
-  push:
-    branches: [ "main" ] # или master, если у вас такая ветка
-  pull_request:
-    branches: [ "main" ]
+  push
 
 jobs:
   build:
+    name: build-and-test-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
 
-    runs-on: ubuntu-latest  # Или windows-latest, если вам нужна Windows
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            build-script: ./build-and-test.sh
+          - os: windows-latest
+            build-script: ./build-and-test.ps1
 
     steps:
-    - uses: actions/checkout@v3 # Клонирует репозиторий в рабочую директорию
+    - uses: actions/checkout@v4
 
-    - name: Setup .NET # Устанавливает нужную версию .NET SDK
-      uses: actions/setup-dotnet@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '6.0.x' # или другую нужную вам версию
+        dotnet-version: 9.0.x
+        
+    - name: Make script executable
+      run: chmod +x build-and-test.sh
+      
+    - name: Build
+      run: ${{ matrix.build-script }} build
 
-    - name: Restore dependencies # Восстанавливает зависимости NuGet
-      run: dotnet restore
-
-    - name: Build # Собирает проект
-      run: dotnet build --configuration Release --no-restore
-
-    - name: Test # Запускает тесты
-      run: dotnet test --no-restore --verbosity normal --logger:"trx;LogFileName=TestResults.trx"
-
-    - name: Publish Test Results
-      uses: dorny/test-reporter@v1
-      if: success() || failure()
-      with:
-        artifact: test-results
-        name: .NET Tests
-        path: '**/*.trx'
-        reporter: dotnet-trx
-
-    - name: Pack # Создает NuGet пакет (опционально)
-      if: github.ref == 'refs/heads/main' # Только для ветки main
-      run: dotnet pack --configuration Release --no-build -o ./artifacts
+    - name: Test
+      run: ${{ matrix.build-script }} test
