@@ -38,7 +38,7 @@ public class UndirectedGraph
         }
     }
 
-    public void AddEdge(int vertex1, int vertex2, int weight) //TODO переписать логику добавления элементов в список путей
+    public void AddEdge(int vertex1, int vertex2, int weight)
     {
         if (!this.Vertices.Contains(vertex1) || !this.Vertices.Contains(vertex2))
         {
@@ -47,25 +47,24 @@ public class UndirectedGraph
         }
         
         this.Edges[(vertex1, vertex2)] = weight;
-        this.Edges[(vertex2, vertex1)] = weight; //поправить
+        this.Edges[(vertex2, vertex1)] = weight;
         
         this.AdjacencyList[vertex1].Add((vertex2, weight));
         this.AdjacencyList[vertex2].Add((vertex1, weight));
-        
     }
 
     public List<(int, int)> GetNeighbors(int vertex)
     {
         List<(int, int)> neighbors = new();
-        foreach (var edge in Edges.Keys)
+        foreach (var edge in this.Edges.Keys)
         {
             if (edge.Item1 == vertex)
             {
-                neighbors.Add((edge.Item2, Edges[edge]));
+                neighbors.Add((edge.Item2, this.Edges[edge]));
             }
             else if (edge.Item2 == vertex)
             {
-                neighbors.Add((edge.Item1, Edges[edge]));
+                neighbors.Add((edge.Item1, this.Edges[edge]));
             }
         }
         

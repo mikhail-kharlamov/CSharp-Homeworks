@@ -1,21 +1,57 @@
 ﻿namespace Routers.Tests;
 
-using UndirectedGraphExtractor;
 using UndirectedGraph;
 using Algorithms;
 
 public class Tests
 {
-    /*[Test]
-    public void UndirectedGraphExtractorTest()
+    [Test]
+    public void UndirectedGraphSetAndGetAdjacencyListTest()
     {
-        List<string> file = new();
-        file.Add("1: 2 (10), 3 (5)");
-        file.Add("1: 2 (10), 3 (5), 4 (11)");
-        var graph = UndirectedGraphExtractor.Extract(file);
-        Assert.Pass();
+        var graph = new UndirectedGraph();
+        Dictionary<int, List<(int, int)>> adjacencyList = new();
+        adjacencyList.Add(1, new List<(int, int)>() { (2, 10), (3, 5) });
+        adjacencyList.Add(2, new List<(int, int)>() { (1, 10), (3, 1) });
+        adjacencyList.Add(3, new List<(int, int)>() { (1, 5), (2, 1) });
+        
+        graph.SetAdjacencyList(adjacencyList);
+        Assert.That(graph.GetAdjacencyList(), Is.EqualTo(adjacencyList));
     }
-*/
+    
+    [Test]
+    public void UndirectedGraphSetAndGetVerticesTest()
+    {
+        var graph = new UndirectedGraph();
+        List<int> originalVertices = new() { 1, 2, 3, 4, 5 };
+        foreach (var vertex in originalVertices)
+        {
+            graph.AddVertex(vertex);
+        }
+        
+        var graphVertices = graph.GetVertices();
+        graphVertices.Sort();
+        Assert.That(graphVertices, Is.EquivalentTo(originalVertices));
+    }
+    
+    [Test]
+    public void UndirectedGraphSetEdgesAndGetAdjacencyListTest()
+    {
+        var graph = new UndirectedGraph();
+        List<(int, int, int)> edges = new() { (1, 2, 10), (1, 3, 5), (2, 3, 1)};
+        foreach (var edge in edges)
+        {
+            graph.AddEdge(edge.Item1, edge.Item2, edge.Item3);
+        }
+        
+        Dictionary<int, List<(int, int)>> originalAdjacencyList = new();
+        originalAdjacencyList.Add(1, new List<(int, int)>() { (2, 10), (3, 5) });
+        originalAdjacencyList.Add(2, new List<(int, int)>() { (1, 10), (3, 1) });
+        originalAdjacencyList.Add(3, new List<(int, int)>() { (1, 5), (2, 1) });
+        
+        var graphAdjacencyList = graph.GetAdjacencyList();
+        Assert.That(originalAdjacencyList, Is.EquivalentTo(graphAdjacencyList));
+    }
+    
     [Test]
     public void AlgorithmOfPrimBaseDataTest()
     {

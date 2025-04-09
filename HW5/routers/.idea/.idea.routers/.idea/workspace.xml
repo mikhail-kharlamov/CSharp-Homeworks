@@ -9,33 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="52535864-8529-41be-a670-ed291123e8dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.routers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.routers/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/routers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/routers.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/routers.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/ref/Routers.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/ref/Routers.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/refint/Routers.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/refint/Routers.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/FileWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/FileWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/ref/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/ref/routers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/refint/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/refint/routers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routers.Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/UnitTest1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/UndirectedGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/UndirectedGraph.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.routers.executor": "Debug",
+    ".NET Project.routers.executor": "Run",
     "3ce3daa1-e62f-4e02-9935-1fec8ceafd32.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -77,7 +52,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.routers">
     <configuration name="routers" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers" />
       <option name="PROGRAM_PARAMETERS" value="input.txt output.txt" />
@@ -96,6 +71,9 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.routers" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -114,7 +92,7 @@
       <workItem from="1743890839490" duration="8041000" />
       <workItem from="1744137435695" duration="3741000" />
       <workItem from="1744144816411" duration="10102000" />
-      <workItem from="1744216706997" duration="1459000" />
+      <workItem from="1744216706997" duration="6306000" />
     </task>
     <servers />
   </component>
