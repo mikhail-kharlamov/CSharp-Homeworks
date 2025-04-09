@@ -9,16 +9,6 @@
     &lt;TestId&gt;NUnit3x::4819C25F-7483-470F-A7F3-62133FAE074B::net9.0::Routers.Tests.Tests.AlgorithmOfPrimBaseDataTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=60227cb1_002D1e29_002D437b_002D9ef6_002Dc99e86c3bf34/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;Routers.Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Project Location="/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/Routers.Tests" Presentation="&amp;lt;Routers.Tests&amp;gt;" /&gt;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a37bb2f6_002Dfaaf_002D4e0a_002D8f41_002D4c8926e6dec1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UndirectedGraphExtractorTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::4819C25F-7483-470F-A7F3-62133FAE074B::net9.0::Routers.Tests.Tests.UndirectedGraphExtractorTest&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b3ec5f3e_002D8fa9_002D4743_002D85cb_002D9d9fb56c6b9a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UndirectedGraphExtractorTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::4819C25F-7483-470F-A7F3-62133FAE074B::net9.0::Routers.Tests.Tests.UndirectedGraphExtractorTest&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+	
+	
+	</wpf:ResourceDictionary>

@@ -1,6 +1,5 @@
 ﻿namespace Routers;
 
-using UndirectedGraph;
 using UndirectedGraphExtractor;
 using Algorithms;
 using FileWriter;
@@ -20,18 +19,7 @@ public class Routers
 
         try
         {
-            List<string> file = new();
-            
-            using (var reader = new StreamReader(fileToRead))
-            {
-                var line = string.Empty;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    file.Add(line);
-                }
-            }
-
-            var undirectedGraph = UndirectedGraphExtractor.Extract(file);
+            var undirectedGraph = UndirectedGraphExtractor.Extract(fileToRead);
             var minimumSpanningTree = AlgorithmOfPrim.GetMinimumSpanningTree(undirectedGraph);
             FileWriter.WriteUndirectedGraphToFile(fileToWrite, minimumSpanningTree);
         }

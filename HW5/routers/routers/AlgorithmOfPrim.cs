@@ -4,7 +4,7 @@ using UndirectedGraph;
 
 public class AlgorithmOfPrim
 {
-    public static UndirectedGraph GetMinimumSpanningTree(UndirectedGraph undirectedGraph)
+    public static UndirectedGraph GetMinimumSpanningTree(UndirectedGraph undirectedGraph, bool reverse = false)
     {
         var tree = new UndirectedGraph();
         var vertices = undirectedGraph.GetVertices();
@@ -30,7 +30,8 @@ public class AlgorithmOfPrim
             
             if (!spanningTreeNearbyVertices.Any()) break;
             
-            var minimalEdge = spanningTreeNearbyVertices.OrderBy(x => x.Item3).First();
+            spanningTreeNearbyVertices.Sort((a, b) => a.Item3.CompareTo(b.Item3));
+            var minimalEdge = reverse ? spanningTreeNearbyVertices[^1] : spanningTreeNearbyVertices[0];
             tree.AddEdge(minimalEdge.Item1, minimalEdge.Item2, minimalEdge.Item3);
             
             spanningTreeNearbyVertices.Clear();
@@ -38,4 +39,6 @@ public class AlgorithmOfPrim
         
         return tree;
     }
+    
+    
 }

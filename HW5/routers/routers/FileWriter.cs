@@ -7,11 +7,45 @@ public class FileWriter
     public static void WriteUndirectedGraphToFile(string filename, UndirectedGraph undirectedGraph)
     {
         var adjacencyList = undirectedGraph.GetAdjacencyList();
-        var edges = undirectedGraph.GetEdges();
-        foreach (var vertex in adjacencyList.Keys)
+        var vertices = undirectedGraph.GetVertices();
+        vertices.Sort();
+        
+        List<(int, int)> addedEdges = new();
+        List<string> lines = new();
+        
+        var line = string.Empty;
+        var countOfWroteEdges = 0;
+        
+        foreach (var vertex in vertices)
         {
-            
+            line += $"{vertex}: ";
+            var nearestVertices = adjacencyList[vertex];
+            for (var i = 0; i < nearestVertices.Count; i++)
+            {
+                var nearestVertex = nearestVertices[i];
+                
+                if (addedEdges.Contains((vertex, nearestVertex.Item1)))
+                {
+                    continue;
+                }
+                
+                line += $"{nearestVertex.Item1} ({nearestVertex.Item2})";
+                countOfWroteEdges++;
+                
+                if (i != nearestVertices.Count - 1)
+                {
+                    line += ", ";
+                }
+                addedEdges.Add((vertex, nearestVertex.Item1));
+                addedEdges.Add((nearestVertex.Item1, vertex));
+            }
+
+            if (countOfWroteEdges > 0)
+            {
+                lines.Add(line);
+            }
         }
+        
+        File.WriteAllLines(filename, lines);
     }
-    //TODO дописать логику записи в файл
 }
