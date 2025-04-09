@@ -55,7 +55,7 @@ public class UndirectedGraph
 
     public List<(int, int)> GetNeighbors(int vertex)
     {
-        List<(int, int)> neighbors = new();
+        HashSet<(int, int)> neighbors = new();
         foreach (var edge in this.Edges.Keys)
         {
             if (edge.Item1 == vertex)
@@ -68,7 +68,7 @@ public class UndirectedGraph
             }
         }
         
-        return neighbors;
+        return neighbors.ToList();
     }
 
     public List<int> GetVertices()

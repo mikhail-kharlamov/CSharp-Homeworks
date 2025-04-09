@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("routers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a23c1ddb0ee5ae03054e2b2c129adf4f93f22a61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc0be9e2f9f7df4962874a51a367ee40e5c585b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("routers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("routers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
