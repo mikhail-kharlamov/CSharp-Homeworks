@@ -1,0 +1,52 @@
+# Compiled Object files
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.bak
+*.csproj.user
+*.sln.docstates
+
+# Build results
+*.exe
+*.dll
+*.pdb
+*.map
+*.aps
+*.metadb
+*.unitypackage
+*.orig
+*.swp
+*.lock
+*.log
+
+# NuGet Packages
+packages/
+*.nupkg
+
+# OS generated files # Операционные системы
+.DS_Store # macOS
+ArchiverLZW/.DS_Store
+Thumbs.db # Windows
+
+# Temporary files
+tmp/
+temp/
+[Tt]emp/
+
+# Rider files
+.idea/
+
+# Secret keys and api keys
+*.config # Общие конфигурационные файлы (осторожно! лучше исключать только specific config файлы с секретами)
+appsettings.Development.json # Sensitive data during development
+
+# Unity files (если используете Unity)
+Library/
+Temp/
+UnityPackageManager/
+ProjectSettings/
+UserSettings/
