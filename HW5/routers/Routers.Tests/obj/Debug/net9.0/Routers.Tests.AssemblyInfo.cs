@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Routers.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0164b34438011cf10c9cc8be676470db4f49decd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2616a6393108619e4dd7a891099eda0a2853c55a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Routers.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Routers.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

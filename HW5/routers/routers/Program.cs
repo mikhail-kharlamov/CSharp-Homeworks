@@ -20,8 +20,9 @@ public class Routers
         try
         {
             var undirectedGraph = UndirectedGraphExtractor.Extract(fileToRead);
-            var minimumSpanningTree = AlgorithmOfPrim.GetMinimumSpanningTree(undirectedGraph);
+            var minimumSpanningTree = AlgorithmOfPrim.GetMinimumSpanningTree(undirectedGraph, true);
             FileWriter.WriteUndirectedGraphToFile(fileToWrite, minimumSpanningTree);
+            Console.WriteLine("The response was recorded successfully");
         }
         catch (FileNotFoundException)
         {

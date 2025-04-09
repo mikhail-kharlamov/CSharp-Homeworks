@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="52535864-8529-41be-a670-ed291123e8dd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.routers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.routers/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Routers.Tests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/UnitTest1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/Routers.Tests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/bin/Debug/net9.0/routers.dll" afterDir="false" />
@@ -22,11 +21,10 @@
       <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/Routers.Tests.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/ref/Routers.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/ref/Routers.Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/refint/Routers.Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/Debug/net9.0/refint/Routers.Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/routers.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/AlgorithmOfPrim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/AlgorithmOfPrim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Routers.Tests/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/FileWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/FileWriter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/UndirectedGraphExtractor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/routers/UndirectedGraphExtractor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/ref/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/ref/routers.dll" afterDir="false" />
@@ -36,6 +34,8 @@
       <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/Debug/net9.0/routers.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/routers/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,26 +62,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.routers.executor&quot;: &quot;Run&quot;,
-    &quot;3ce3daa1-e62f-4e02-9935-1fec8ceafd32.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;routers&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.routers.executor": "Debug",
+    "3ce3daa1-e62f-4e02-9935-1fec8ceafd32.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "routers",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Project.routers">
+}]]></component>
+  <component name="RunManager">
     <configuration name="routers" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/routers/bin/Debug/net9.0/routers" />
+      <option name="PROGRAM_PARAMETERS" value="input.txt output.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/routers/bin/Debug/net9.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -91,7 +91,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net9.0" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -113,7 +113,8 @@
       <workItem from="1743691413780" duration="10943000" />
       <workItem from="1743890839490" duration="8041000" />
       <workItem from="1744137435695" duration="3741000" />
-      <workItem from="1744144816411" duration="9473000" />
+      <workItem from="1744144816411" duration="10102000" />
+      <workItem from="1744216706997" duration="1459000" />
     </task>
     <servers />
   </component>
@@ -135,5 +136,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/routers/FileWriter.cs</url>
+          <line>8</line>
+          <properties documentPath="$PROJECT_DIR$/routers/FileWriter.cs" containingFunctionPresentation="Method 'WriteUndirectedGraphToFile'">
+            <startOffsets>
+              <option value="187" />
+            </startOffsets>
+            <endOffsets>
+              <option value="242" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

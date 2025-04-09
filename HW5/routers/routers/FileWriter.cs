@@ -18,7 +18,6 @@ public class FileWriter
         
         foreach (var vertex in vertices)
         {
-            line += $"{vertex}: ";
             var nearestVertices = adjacencyList[vertex];
             for (var i = 0; i < nearestVertices.Count; i++)
             {
@@ -27,6 +26,11 @@ public class FileWriter
                 if (addedEdges.Contains((vertex, nearestVertex.Item1)))
                 {
                     continue;
+                }
+
+                if (i == 0)
+                {
+                    line += $"{vertex}: ";
                 }
                 
                 line += $"{nearestVertex.Item1} ({nearestVertex.Item2})";
@@ -44,6 +48,8 @@ public class FileWriter
             {
                 lines.Add(line);
             }
+
+            countOfWroteEdges = 0;
         }
         
         File.WriteAllLines(filename, lines);
