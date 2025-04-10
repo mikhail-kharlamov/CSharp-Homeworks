@@ -4,8 +4,16 @@ using UndirectedGraphExtractor;
 using Algorithms;
 using FileWriter;
 
+/// <summary>
+/// Class for main program with console interface.
+/// </summary>>
 public class Routers
 {
+    /// <summary>
+    /// Main method
+    /// </summary>>
+    /// <param name="args">Arguments from command line.</param>
+    /// <returns>Nothing.</returns>
     public static void Main(string[] args)
     {
         if (args.Length != 2)

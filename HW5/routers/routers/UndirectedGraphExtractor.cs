@@ -1,11 +1,18 @@
 namespace UndirectedGraphExtractor;
 
 using UndirectedGraph;
-
 using System.Text.RegularExpressions;
 
+/// <summary>
+/// Class for extraction undirected graph from adjacency list in file.
+/// </summary>>
 public class UndirectedGraphExtractor
 {
+    /// <summary>
+    /// Method for extraction.
+    /// </summary>>
+    /// <param name="filename">Way to input file.</param>
+    /// <returns>Extracted graph as undirected graph data structure.</returns>
     public static UndirectedGraph Extract(string filename)
     {
         List<string> file = new();

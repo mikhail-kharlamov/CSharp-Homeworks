@@ -2,8 +2,17 @@ namespace Algorithms;
 
 using UndirectedGraph;
 
+/// <summary>
+/// Class for algorithm of Prim.
+/// </summary>>
 public class AlgorithmOfPrim
 {
+    /// <summary>
+    /// Method for getting the minimum spanning tree of the undirected graph.
+    /// </summary>>
+    /// <param name="undirectedGraph">Graph fot getting minimum spanning tree.</param>
+    /// <param name="reverse">Optional argument for finding the largest paths to the nearest vertices.</param>
+    /// <returns>Minimum spanning tree as undirected graph data structure .</returns>
     public static UndirectedGraph GetMinimumSpanningTree(UndirectedGraph undirectedGraph, bool reverse = false)
     {
         var tree = new UndirectedGraph();

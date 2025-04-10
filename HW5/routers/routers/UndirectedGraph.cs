@@ -1,5 +1,8 @@
 namespace UndirectedGraph;
 
+/// <summary>
+/// Class for undirected graph data structure.
+/// </summary>>
 public class UndirectedGraph
 {
     private HashSet<int> Vertices { get; set; } = new();
@@ -8,6 +11,11 @@ public class UndirectedGraph
     
     private Dictionary<int, List<(int, int)>> AdjacencyList { get; set; } = new();
 
+    /// <summary>
+    /// Method for setting graph by adjacency list.
+    /// </summary>>
+    /// <param name="list">Adjacency list.</param>
+    /// <returns>Nothing.</returns>
     public void SetAdjacencyList(Dictionary<int, List<(int, int)>> list)
     {
         this.AdjacencyList = list;
@@ -24,11 +32,20 @@ public class UndirectedGraph
         }
     }
 
+    /// <summary>
+    /// Method for getting adjacency list.
+    /// </summary>>
+    /// <returns>Adjacency list.</returns>
     public Dictionary<int, List<(int, int)>> GetAdjacencyList()
     {
         return this.AdjacencyList;
     }
 
+    /// <summary>
+    /// Method for adding vertex to graph.
+    /// </summary>>
+    /// <param name="vertex">Vertex as int number.</param>
+    /// <returns>Nothing.</returns>
     public void AddVertex(int vertex)
     {
         this.Vertices.Add(vertex);
@@ -38,6 +55,13 @@ public class UndirectedGraph
         }
     }
 
+    /// <summary>
+    /// Method for adding edge to graph.
+    /// </summary>>
+    /// <param name="vertex1">The first vertex as int number.</param>
+    /// <param name="vertex2">The second vertex as int number.</param>
+    /// <param name="weight">Weight of the edge.</param>
+    /// <returns>Nothing.</returns>
     public void AddEdge(int vertex1, int vertex2, int weight)
     {
         if (!this.Vertices.Contains(vertex1) || !this.Vertices.Contains(vertex2))
@@ -53,6 +77,11 @@ public class UndirectedGraph
         this.AdjacencyList[vertex2].Add((vertex1, weight));
     }
 
+    /// <summary>
+    /// Method for getting neighbours of vertex.
+    /// </summary>>
+    /// <param name="vertex">Vertex as int number.</param>
+    /// <returns>List of the pairs of nearby vertices and weights of the edges with them.</returns>
     public List<(int, int)> GetNeighbors(int vertex)
     {
         HashSet<(int, int)> neighbors = new();
@@ -71,11 +100,19 @@ public class UndirectedGraph
         return neighbors.ToList();
     }
 
+    /// <summary>
+    /// Method for getting graph vertices.
+    /// </summary>>
+    /// <returns>List of vertices.</returns>
     public List<int> GetVertices()
     {
         return this.Vertices.ToList();
     }
 
+    /// <summary>
+    /// Method for getting graph edges.
+    /// </summary>>
+    /// <returns>Dictionary that maps tha pair of vertices to weight of the edge between them.</returns>
     public Dictionary<(int, int), int> GetEdges()
     {
         return this.Edges;
