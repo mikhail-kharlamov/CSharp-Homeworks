@@ -1,0 +1,15 @@
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/bin/Debug/net9.0/DeijkstraAlgorithm
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/bin/Debug/net9.0/DeijkstraAlgorithm.deps.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/bin/Debug/net9.0/DeijkstraAlgorithm.runtimeconfig.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/bin/Debug/net9.0/DeijkstraAlgorithm.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/bin/Debug/net9.0/DeijkstraAlgorithm.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.AssemblyInfoInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.AssemblyInfo.cs
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.csproj.CoreCompileInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.sourcelink.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/refint/DeijkstraAlgorithm.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/DeijkstraAlgorithm.genruntimeconfig.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/DeijkstraAlgorithm/DeijkstraAlgorithm/obj/Debug/net9.0/ref/DeijkstraAlgorithm.dll
