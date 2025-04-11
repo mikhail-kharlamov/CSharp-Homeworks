@@ -12,4 +12,11 @@ public class Tests
         heap.Insert(1, 4);
         Assert.That(heap.ExtractMaximum(), Is.EqualTo(1));
     }
+
+    [Test]
+    public void BinaryHeapEmptyExtractMaximumTest()
+    {
+        var heap = new BinaryHeap();
+        Assert.Throws<Exception>(() => heap.ExtractMaximum());
+    }
 }
