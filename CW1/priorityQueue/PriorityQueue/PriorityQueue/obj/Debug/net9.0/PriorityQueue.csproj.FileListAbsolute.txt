@@ -1,0 +1,12 @@
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/bin/Debug/net9.0/PriorityQueue.deps.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/bin/Debug/net9.0/PriorityQueue.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/bin/Debug/net9.0/PriorityQueue.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/PriorityQueue.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/PriorityQueue.AssemblyInfoInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/PriorityQueue.AssemblyInfo.cs
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/PriorityQueue.csproj.CoreCompileInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/PriorityQueue.sourcelink.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/PriorityQueue.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/refint/PriorityQueue.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/PriorityQueue.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/CW1/priorityQueue/PriorityQueue/PriorityQueue/obj/Debug/net9.0/ref/PriorityQueue.dll
