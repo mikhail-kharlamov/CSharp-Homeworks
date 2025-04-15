@@ -1,4 +1,6 @@
-namespace parseTree;
+using parseTree;
+
+namespace ParseTree;
 
 using Node;
 
@@ -6,8 +8,8 @@ public class OperatorNode : Node
 {
     private char Operator { get; set; }
     
-    private Node? LeftChild { get; set; } = null;
-    private Node? RightChild { get; set; } = null;
+    public Node? LeftChild { get; set; }
+    public Node? RightChild { get; set; }
 
     public void SetOperation(char operation, Node operand1, Node operand2)
     {
@@ -18,8 +20,8 @@ public class OperatorNode : Node
 
     public override int Evaluate()
     {
-        var leftValue = this.LeftChild is null ? throw new Exception(), this.LeftChild.Evaluate();
-        var rightValue = this.RightChild is null ? throw new Exception(), this.RightChild.Evaluate();
+        var leftValue = this.LeftChild is null ? throw new Exception() : this.LeftChild.Evaluate();
+        var rightValue = this.RightChild is null ? throw new Exception() : this.RightChild.Evaluate();
         return Operator switch
         {
             '+' => leftValue + rightValue,
@@ -30,5 +32,7 @@ public class OperatorNode : Node
         };
     }
 
-    public override string Print() => $"( {Operator} {this.LeftChild.Print()} {this.RightChild.Print()} )";
+    public override string Print() => this.LeftChild != null && this.RightChild != null ? 
+        $"( {Operator} {this.LeftChild.Print()} {this.RightChild.Print()} )" : 
+        throw new ChildIsNullReferenceException();
 }

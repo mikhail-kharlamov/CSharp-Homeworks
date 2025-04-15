@@ -1,4 +1,4 @@
-namespace parseTree;
+namespace ParseTree;
 
 using Node;
 

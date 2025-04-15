@@ -346,6 +346,23 @@
             "related": ".xml"
           }
         }
+      },
+      "parseTree/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.NET.Test.Sdk": "17.12.0",
+          "NUnit": "4.2.2",
+          "NUnit.Analyzers": "4.4.0",
+          "NUnit3TestAdapter": "4.6.0",
+          "coverlet.collector": "6.0.2"
+        },
+        "compile": {
+          "bin/placeholder/parseTree.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/parseTree.dll": {}
+        }
       }
     }
   },
@@ -793,6 +810,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "parseTree/1.0.0": {
+      "type": "project",
+      "path": "../parseTree/parseTree.csproj",
+      "msbuildProject": "../parseTree/parseTree.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -801,7 +823,8 @@
       "NUnit >= 4.2.2",
       "NUnit.Analyzers >= 4.4.0",
       "NUnit3TestAdapter >= 4.6.0",
-      "coverlet.collector >= 6.0.2"
+      "coverlet.collector >= 6.0.2",
+      "parseTree >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -828,7 +851,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW6/parseTree/parseTree/parseTree/parseTree.csproj": {
+              "projectPath": "/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW6/parseTree/parseTree/parseTree/parseTree.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
