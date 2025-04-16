@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("parseTree")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53e1a9d7c8702d37606d3b59aef75b0acddeb828")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c31219430360f0795cc4db96f80b84adf810916")]
 [assembly: System.Reflection.AssemblyProductAttribute("parseTree")]
 [assembly: System.Reflection.AssemblyTitleAttribute("parseTree")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

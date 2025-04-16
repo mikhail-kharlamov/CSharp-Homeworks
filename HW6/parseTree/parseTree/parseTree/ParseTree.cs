@@ -13,7 +13,7 @@ public class ParseTree
             throw new IndexOutOfRangeException();
         }
         
-        if (input[index] == ' ')
+        if (input[index] == ' ' || input[index] == ')')
         {
             index++;
             var node = BuildTree(input, index);
