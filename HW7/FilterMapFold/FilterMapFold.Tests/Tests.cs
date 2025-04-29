@@ -1,5 +1,7 @@
 ﻿namespace FilterMapFold.Tests;
 
+using FilterMapFold.Exceptions;
+
 public class Tests
 {
     [SetUp]
@@ -60,12 +62,22 @@ public class Tests
         Assert.That(HigherOrderFunctions.Fold(collection, function), Is.EqualTo(45));
     }
 
-    /*[Test]
-    public void FoldEmptyCollectionTest() //TODO fix
+    [Test]
+    public void FoldFunctionStringDataTest()
+    {
+        var collection = new string[] { "a", "b", "c", "d", "e", "f" };
+        var function = new Func<string, string, string>((x, y) => $"{x}{y}");
+        Assert.That(HigherOrderFunctions.Fold(collection, function), Is.EquivalentTo("abcdef"));
+    }
+
+    [Test]
+    public void FoldEmptyCollectionTest()
     {
         var collection = new int[] { };
         var function = new Func<int, int, int>((x, y) => x + y);
-        var result = HigherOrderFunctions.Fold(collection, function);
-        Assert.That(HigherOrderFunctions.Fold(collection, function), Is.EqualTo(45));
-    }*/
+        Assert.Throws<EmptyCollectionFoldException>(() =>
+        {
+            HigherOrderFunctions.Fold(collection, function);
+        });
+    }
 }
