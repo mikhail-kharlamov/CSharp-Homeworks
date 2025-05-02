@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="https://github.com/avaloniaui"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:calculator"
+        x:Class="CalculatorApp.Views.MainWindow"
+        mc:Ignorable="d">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+
+    <StackPanel>
+        <TextBlock Text="{Binding Display}" FontSize="32" HorizontalAlignment="Right" Margin="10" />
+
+        <WrapPanel>
+            <Button Content="1" Command="{Binding DigitCommand}" CommandParameter="1" />
+            <Button Content="2" Command="{Binding DigitCommand}" CommandParameter="2" />
+            <Button Content="3" Command="{Binding DigitCommand}" CommandParameter="3" />
+            <Button Content="4" Command="{Binding DigitCommand}" CommandParameter="4" />
+            <Button Content="5" Command="{Binding DigitCommand}" CommandParameter="5" />
+            <Button Content="6" Command="{Binding DigitCommand}" CommandParameter="6" />
+            <Button Content="7" Command="{Binding DigitCommand}" CommandParameter="7" />
+            <Button Content="+" Command="{Binding OperatorCommand}" CommandParameter="+" />
+            <Button Content="-" Command="{Binding OperatorCommand}" CommandParameter="-" />
+            <Button Content="*" Command="{Binding OperatorCommand}" CommandParameter="*" />
+            <Button Content="/" Command="{Binding OperatorCommand}" CommandParameter="/" />
+        </WrapPanel>
+    </StackPanel>
+</Window>
