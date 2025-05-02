@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Button.MainWindow"
+        Title="Убегающая кнопка"
+        Width="800" Height="600">
+
+    <Canvas x:Name="MainCanvas"
+            PointerMoved="MovedOnButton">
+        <Button x:Name="EscapeButton"
+                Width="100" Height="40"
+                Content="Нажми меня!"
+                Canvas.Left="100" Canvas.Top="100"
+                PointerPressed="ButtonPressed" />
+    </Canvas>
+</Window>
