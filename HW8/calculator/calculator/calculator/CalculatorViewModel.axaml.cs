@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace calculator;
 
-public partial class MainWindow : Window
+public partial class CalculatorViewModel : Window
 {
-    public MainWindow()
+    public CalculatorViewModel()
     {
         InitializeComponent();
     }
