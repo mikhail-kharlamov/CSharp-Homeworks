@@ -1,42 +1,60 @@
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows.Input;
+
 namespace Calculator;
 
-using ReactiveUI;
-using System.Reactive;
-
-public class CalculatorViewModel : ReactiveObject
+public class MainWindowViewModel : INotifyPropertyChanged
 {
+    private readonly CalculatorLogic _calculator = new();
+
     private string _display = "0";
     public string Display
     {
         get => _display;
-        set => this.RaiseAndSetIfChanged(ref _display, value);
+        set
+        {
+            if (_display != value)
+            {
+                _display = value;
+                OnPropertyChanged();
+            }
+        }
     }
 
-    public ReactiveCommand<string, Unit> DigitCommand { get; }
-    public ReactiveCommand<string, Unit> OperatorCommand { get; }
-    public ReactiveCommand<string, Unit> ClearCommand { get; }
-    public ReactiveCommand<string, Unit> ServiceCommand { get; }
+    public ICommand DigitCommand { get; }
+    public ICommand OperatorCommand { get; }
+    public ICommand EqualCommand { get; }
+    public ICommand ClearCommand { get; }
 
-    public CalculatorViewModel()
+    public MainWindowViewModel()
     {
-        DigitCommand = ReactiveCommand.Create<string>(content => 
+        DigitCommand = new RelayCommand(param =>
         {
-            Display = (Display == "0") ? content : Display + content;
+            _calculator.AddDigit(param.ToString());
+            Display = _calculator.GetDisplay();
         });
 
-        OperatorCommand = ReactiveCommand.Create<string>(content => 
+        OperatorCommand = new RelayCommand(param =>
         {
-            Display += $" {content} ";
-        });
-        
-        ClearCommand = ReactiveCommand.Create<string>(content => 
-        {
-            Display = (Display == "0") ? content : Display + content;
+            _calculator.SetOperator(param.ToString());
+            Display = _calculator.GetDisplay();
         });
 
-        ServiceCommand = ReactiveCommand.Create<string>(content => 
+        EqualCommand = new RelayCommand(_ =>
         {
-            Display += $" {content} ";
+            _calculator.Calculate();
+            Display = _calculator.GetDisplay();
+        });
+
+        ClearCommand = new RelayCommand(_ =>
+        {
+            _calculator.Clear();
+            Display = _calculator.GetDisplay();
         });
     }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+    protected void OnPropertyChanged([CallerMemberName] string? name = null) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }

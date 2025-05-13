@@ -1,46 +1,51 @@
 namespace Calculator;
 
-public class Calculator
+public class CalculatorLogic
 {
-    public string DisplayValue;
-    
-    private double? number = null;
-    
-    private char? operation = null;
+    private double? _firstNumber;
+    private string? _operator;
+    private string _currentInput = "";
 
-    private string buffer = string.Empty;
-
-    public void AddDigit(char digit)
+    public void AddDigit(string digit)
     {
-        this.buffer += digit.ToString();
+        _currentInput += digit;
     }
 
-    public void AddOperator(char operation)
+    public void SetOperator(string op)
     {
-        if (this.operation is null)
+        if (double.TryParse(_currentInput, out var num))
         {
-            this.number = double.Parse(this.buffer);
+            _firstNumber = num;
+            _operator = op;
+            _currentInput = "";
         }
-        else
+    }
+
+    public void Calculate()
+    {
+        if (_firstNumber.HasValue && double.TryParse(_currentInput, out var second))
         {
-            var newNumber = double.Parse(this.buffer);
-            switch (this.operation)
+            double result = _operator switch
             {
-                case '+':
-                    this.number += newNumber;
-                    break;
-                case '-':
-                    this.number -= newNumber;
-                    break;
-                case '*':
-                    this.number *= newNumber;
-                    break;
-                case '/':
-                    this.number /= newNumber;
-                    break;
-            }
+                "+" => _firstNumber.Value + second,
+                "-" => _firstNumber.Value - second,
+                "*" => _firstNumber.Value * second,
+                "/" => second != 0 ? _firstNumber.Value / second : 0,
+                _ => 0
+            };
+
+            _currentInput = result.ToString();
+            _firstNumber = null;
+            _operator = null;
         }
-        this.buffer = string.Empty;
-        this.operation = operation;
     }
+
+    public void Clear()
+    {
+        _firstNumber = null;
+        _operator = null;
+        _currentInput = "";
+    }
+
+    public string GetDisplay() => string.IsNullOrEmpty(_currentInput) ? "0" : _currentInput;
 }
