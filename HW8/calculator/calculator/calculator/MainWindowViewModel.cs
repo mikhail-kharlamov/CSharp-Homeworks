@@ -6,17 +6,17 @@ namespace Calculator;
 
 public class MainWindowViewModel : INotifyPropertyChanged
 {
-    private readonly CalculatorLogic _calculator = new();
+    private readonly CalculatorLogic calculator = new();
 
-    private string _display = "0";
+    private string display = "0";
     public string Display
     {
-        get => _display;
+        get => this.display;
         set
         {
-            if (_display != value)
+            if (this.display != value)
             {
-                _display = value;
+                this.display = value;
                 OnPropertyChanged();
             }
         }
@@ -26,35 +26,37 @@ public class MainWindowViewModel : INotifyPropertyChanged
     public ICommand OperatorCommand { get; }
     public ICommand EqualCommand { get; }
     public ICommand ClearCommand { get; }
+    
+    public ICommand ServiceCommand { get; }
 
     public MainWindowViewModel()
     {
         DigitCommand = new RelayCommand(param =>
         {
-            _calculator.AddDigit(param.ToString());
-            Display = _calculator.GetDisplay();
+            this.calculator.AddDigit(param.ToString()[0]);
+            this.Display = calculator.GetDisplay();
         });
 
         OperatorCommand = new RelayCommand(param =>
         {
-            _calculator.SetOperator(param.ToString());
-            Display = _calculator.GetDisplay();
+            this.calculator.SetOperator(param.ToString()[0]);
+            this.Display = calculator.GetDisplay();
         });
 
         EqualCommand = new RelayCommand(_ =>
         {
-            _calculator.Calculate();
-            Display = _calculator.GetDisplay();
+            this.Display = calculator.GetDisplay();
         });
 
         ClearCommand = new RelayCommand(_ =>
         {
-            _calculator.Clear();
-            Display = _calculator.GetDisplay();
+            this.calculator.Clear();
+            this.Display = calculator.GetDisplay();
         });
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
+    
     protected void OnPropertyChanged([CallerMemberName] string? name = null) =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }

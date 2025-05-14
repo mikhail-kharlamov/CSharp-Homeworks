@@ -2,50 +2,71 @@ namespace Calculator;
 
 public class CalculatorLogic
 {
-    private double? _firstNumber;
-    private string? _operator;
-    private string _currentInput = "";
+    private string displayValue = "";
 
-    public void AddDigit(string digit)
+    private double number = 0;
+
+    private char? operation = null;
+
+    private string buffer = "";
+
+    public string GetDisplay() => string.IsNullOrEmpty(this.displayValue) ? "0" : this.displayValue;
+
+    public void AddDigit(char digit)
     {
-        _currentInput += digit;
+        this.buffer += digit.ToString();
+        this.displayValue = this.buffer;
     }
 
-    public void SetOperator(string op)
+    public void SetOperator(char operation)
     {
-        if (double.TryParse(_currentInput, out var num))
+        if (this.operation is null)
         {
-            _firstNumber = num;
-            _operator = op;
-            _currentInput = "";
+            this.number = double.Parse(this.buffer);
         }
-    }
-
-    public void Calculate()
-    {
-        if (_firstNumber.HasValue && double.TryParse(_currentInput, out var second))
+        else
         {
-            double result = _operator switch
+            var newNumber = double.Parse(this.buffer);
+            switch (this.operation)
             {
-                "+" => _firstNumber.Value + second,
-                "-" => _firstNumber.Value - second,
-                "*" => _firstNumber.Value * second,
-                "/" => second != 0 ? _firstNumber.Value / second : 0,
-                _ => 0
-            };
-
-            _currentInput = result.ToString();
-            _firstNumber = null;
-            _operator = null;
+                case '+':
+                    this.number += newNumber;
+                    break;
+                case '-':
+                    this.number -= newNumber;
+                    break;
+                case '*':
+                    this.number *= newNumber;
+                    break;
+                case '/':
+                    this.number /= newNumber;
+                    break;
+            }
         }
+
+        this.displayValue = this.number.ToString();
+        this.buffer = "";
+        this.operation = operation;
     }
 
     public void Clear()
     {
-        _firstNumber = null;
-        _operator = null;
-        _currentInput = "";
+        this.displayValue = "";
+        this.number = 0;
+        this.operation = null;
+        this.buffer = "";
     }
 
-    public string GetDisplay() => string.IsNullOrEmpty(_currentInput) ? "0" : _currentInput;
+    public void SetServiceOperator(char @operator)
+    {
+        switch (@operator)
+        {
+            case '.':
+                if (!this.buffer[^1].Equals('.'))
+                {
+                    this.buffer += @operator;
+                }
+                break;
+        }
+    }
 }
