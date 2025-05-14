@@ -53,10 +53,16 @@ public class MainWindowViewModel : INotifyPropertyChanged
             this.calculator.Clear();
             this.Display = calculator.GetDisplay();
         });
+
+        ServiceCommand = new RelayCommand(param =>
+        {
+            this.calculator.SetServiceOperator(param.ToString());
+            this.Display = calculator.GetDisplay();
+        });
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
     
-    protected void OnPropertyChanged([CallerMemberName] string? name = null) =>
+    private void OnPropertyChanged([CallerMemberName] string? name = null) =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }

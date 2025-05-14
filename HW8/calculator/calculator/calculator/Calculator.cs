@@ -14,39 +14,56 @@ public class CalculatorLogic
 
     public void AddDigit(char digit)
     {
-        this.buffer += digit.ToString();
+        if (this.displayValue != "0")
+        {
+            this.buffer += digit.ToString();
+        }
+        else
+        {
+            this.buffer = digit.ToString();
+        }
         this.displayValue = this.buffer;
     }
 
     public void SetOperator(char operation)
     {
-        if (this.operation is null)
+        if (!string.IsNullOrEmpty(this.buffer))
         {
-            this.number = double.Parse(this.buffer);
-        }
-        else
-        {
-            var newNumber = double.Parse(this.buffer);
-            switch (this.operation)
+            if (this.operation is null)
             {
-                case '+':
-                    this.number += newNumber;
-                    break;
-                case '-':
-                    this.number -= newNumber;
-                    break;
-                case '*':
-                    this.number *= newNumber;
-                    break;
-                case '/':
-                    this.number /= newNumber;
-                    break;
+                this.number = double.Parse(this.buffer);
+            }
+            else
+            {
+                var newNumber = double.Parse(this.buffer);
+                switch (this.operation)
+                {
+                    case '+':
+                        this.number += newNumber;
+                        break;
+                    case '-':
+                        this.number -= newNumber;
+                        break;
+                    case '*':
+                        this.number *= newNumber;
+                        break;
+                    case '/':
+                        this.number /= newNumber;
+                        break;
+                }
             }
         }
 
         this.displayValue = this.number.ToString();
         this.buffer = "";
-        this.operation = operation;
+        if (operation != '=')
+        {
+            this.operation = operation;
+        }
+        else
+        {
+            this.operation = null;
+        }
     }
 
     public void Clear()
@@ -57,16 +74,28 @@ public class CalculatorLogic
         this.buffer = "";
     }
 
-    public void SetServiceOperator(char @operator)
+    public void SetServiceOperator(string @operator)
     {
         switch (@operator)
         {
-            case '.':
-                if (!this.buffer[^1].Equals('.'))
+            case ",":
+                if (!this.buffer.Contains(','))
                 {
-                    this.buffer += @operator;
+                    this.buffer += ",";
+                }
+                break;
+            case "+/-":
+                if (!this.buffer[0].Equals('-'))
+                {
+                    this.buffer = "-" + this.buffer;
+                }
+                else
+                {
+                    this.buffer = this.buffer.Substring(1);
                 }
                 break;
         }
+        
+        this.displayValue = this.buffer;
     }
 }

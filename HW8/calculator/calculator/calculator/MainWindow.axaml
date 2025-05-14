@@ -4,6 +4,7 @@
         x:Class="Calculator.MainWindow"
         Title="Calculator"
         Width="300" Height="500"
+        CanResize="False"
         WindowStartupLocation="CenterScreen"
         TransparencyLevelHint="None"
         Background="Transparent"
@@ -76,8 +77,8 @@
                 <Button Content="0" Command="{Binding DigitCommand}" 
                         Classes="DarkButton" Grid.ColumnSpan="2"
                         CommandParameter="0"/>
-                <Button Content="." Command="{Binding ServiceCommand}" 
-                        Classes="DarkButton" CommandParameter="."/>
+                <Button Content="," Command="{Binding ServiceCommand}" 
+                        Classes="DarkButton" CommandParameter=","/>
                 <Button Content="=" Command="{Binding OperatorCommand}" 
                         Classes="OrangeButton" CommandParameter="="/>
             </UniformGrid>
@@ -86,6 +87,8 @@
 
     <Window.Styles>
         <Style Selector="Button">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderThickness" Value="0"/>
@@ -99,22 +102,32 @@
         <Style Selector="Button.GrayButton">
             <Setter Property="Background" Value="#A5A5A5"/>
             <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
         
         <Style Selector="Button.DarkButton">
             <Setter Property="Background" Value="#333333"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
         
         <Style Selector="Button.OrangeButton">
             <Setter Property="Background" Value="#FF9F0A"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
         
         <Style Selector="Button:pointerover">
             <Setter Property="Opacity" Value="0.8"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
         
         <Style Selector="Button:pressed">
             <Setter Property="Opacity" Value="0.6"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
     </Window.Styles>
 </Window>
