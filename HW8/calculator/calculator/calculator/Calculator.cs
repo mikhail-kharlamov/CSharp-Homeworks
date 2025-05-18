@@ -2,7 +2,7 @@ namespace Calculator;
 
 public class CalculatorLogic
 {
-    private string displayValue = "";
+    private string displayValue = "0";
 
     private double number = 0;
 
@@ -68,7 +68,7 @@ public class CalculatorLogic
 
     public void Clear()
     {
-        this.displayValue = "";
+        this.displayValue = "0";
         this.number = 0;
         this.operation = null;
         this.buffer = "";
@@ -85,7 +85,7 @@ public class CalculatorLogic
                 }
                 break;
             case "+/-":
-                if (!this.buffer[0].Equals('-'))
+                if (!this.buffer.Contains('-'))
                 {
                     this.buffer = "-" + this.buffer;
                 }
@@ -94,8 +94,29 @@ public class CalculatorLogic
                     this.buffer = this.buffer.Substring(1);
                 }
                 break;
+            case "%":
+                this.SetOperator('/');
+                foreach (var digit in "100")
+                {
+                    this.AddDigit(digit);
+                }
+                this.SetOperator('=');
+                return;
         }
-        
-        this.displayValue = this.buffer;
+
+        if (this.buffer == ",")
+        {
+            this.displayValue += this.buffer;
+            this.buffer = this.displayValue;
+        }
+        else if (this.buffer == "-")
+        {
+            this.buffer += this.displayValue;
+            this.displayValue = this.buffer;
+        }
+        else
+        {
+            this.displayValue = this.buffer;
+        }
     }
 }

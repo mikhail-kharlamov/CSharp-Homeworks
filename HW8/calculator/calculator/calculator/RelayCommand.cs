@@ -1,7 +1,6 @@
-using System;
-using System.Windows.Input;
-
 namespace Calculator;
+
+using System.Windows.Input;
 
 public class RelayCommand : ICommand
 {

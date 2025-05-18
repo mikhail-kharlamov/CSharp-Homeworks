@@ -1,8 +1,8 @@
+namespace Calculator;
+
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-
-namespace Calculator;
 
 public class MainWindowViewModel : INotifyPropertyChanged
 {
@@ -24,7 +24,6 @@ public class MainWindowViewModel : INotifyPropertyChanged
 
     public ICommand DigitCommand { get; }
     public ICommand OperatorCommand { get; }
-    public ICommand EqualCommand { get; }
     public ICommand ClearCommand { get; }
     
     public ICommand ServiceCommand { get; }
@@ -40,11 +39,6 @@ public class MainWindowViewModel : INotifyPropertyChanged
         OperatorCommand = new RelayCommand(param =>
         {
             this.calculator.SetOperator(param.ToString()[0]);
-            this.Display = calculator.GetDisplay();
-        });
-
-        EqualCommand = new RelayCommand(_ =>
-        {
             this.Display = calculator.GetDisplay();
         });
 
