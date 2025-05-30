@@ -11,4 +11,8 @@
       <PackageReference Include="Fortnox.NET.SDK" Version="4.3.22" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435" PrivateAssets="all" />
+    </ItemGroup>
+
 </Project>
