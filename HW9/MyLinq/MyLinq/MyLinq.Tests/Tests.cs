@@ -1,4 +1,8 @@
-﻿namespace MyLinq.Tests;
+﻿// <copyright file="SparseVector.cs" company="Mikhail Kharlamov">
+// Copyright (c) Mikhail Kharlamov. All rights reserved.
+// </copyright>
+
+namespace MyLinq.Tests;
 
 public class Tests
 {
