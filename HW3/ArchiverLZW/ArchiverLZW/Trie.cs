@@ -5,10 +5,10 @@ namespace TrieDataStructure;
 /// </summary>>
 public class Trie
 {
-    private Node _root = new Node();
-    
-    private int size { get; set; }
-    
+    private Node root = new();
+
+    private int size;
+
     /// <summary>
     /// Adds element to the trie.
     /// </summary>>
@@ -16,13 +16,14 @@ public class Trie
     /// <returns>True if element hasn't been in trie before.</returns>
     public bool Add(string element)
     {
-        var node = this._root;
+        var node = this.root;
         foreach (var letter in element)
         {
             if (!node.Children.ContainsKey(letter))
             {
                 node.Children[letter] = new Node();
             }
+
             node = node.Children[letter];
         }
 
@@ -30,6 +31,7 @@ public class Trie
         {
             return false;
         }
+
         this.size++;
         node.ElementNumber = this.size;
         return true;
@@ -42,15 +44,17 @@ public class Trie
     /// <returns>Number in the last node of element. Zero if trie doesn't contain it.</returns>
     public int Contains(string element)
     {
-        var node = this._root;
+        var node = this.root;
         foreach (var letter in element)
         {
-            if (!node.Children.ContainsKey(letter))
+            if (!node.Children.TryGetValue(letter, out var child))
             {
                 return 0;
             }
-            node = node.Children[letter];
+
+            node = child;
         }
+
         return node.ElementNumber;
     }
 
@@ -61,11 +65,12 @@ public class Trie
     /// <returns>True if element really has been in trie.</returns>
     public bool Remove(string element)
     {
-        var (isElementInTree, isChildHasChildren) = DeleteRecursively(this._root, element, 0);
+        var (isElementInTree, _) = DeleteRecursively(this.root, element, 0);
         if (isElementInTree)
         {
             this.size--;
         }
+
         return isElementInTree;
     }
 
@@ -75,15 +80,18 @@ public class Trie
         {
             return (true, false);
         }
+
         if (node.ElementNumber != 0 && element.Length == numberOfLetter)
         {
             node.ElementNumber = 0;
             return (true, true);
-        } 
+        }
+
         if (node.Children.Count == 0 && element.Length == numberOfLetter)
         {
             return (false, false);
         }
+
         var letter = element[numberOfLetter];
         var children = node.Children[letter];
         var (isElementInTree, isChildHasChildren) = DeleteRecursively(children, element, numberOfLetter + 1);
@@ -96,9 +104,10 @@ public class Trie
         {
             node.Children.Remove(element[numberOfLetter]);
         }
+
         return (isElementInTree, node.Children.Count != 0);
     }
-    
+
     /// <summary>
     /// Counts how many elements starts with prefix.
     /// </summary>>
@@ -106,21 +115,23 @@ public class Trie
     /// <returns>Count of elements that starts with this prefix.</returns>
     public int HowManyStartsWithPrefix(string prefix)
     {
-        var node = this._root;
+        var node = this.root;
         foreach (var letter in prefix)
         {
             if (!node.Children.ContainsKey(letter))
             {
                 return 0;
             }
+
             node = node.Children[letter];
         }
 
-        var count =  PrefixCounterRecursively(node);
+        var count = PrefixCounterRecursively(node);
         if (node.ElementNumber != 0)
         {
             count++;
         }
+
         return count;
     }
 
@@ -128,7 +139,7 @@ public class Trie
     {
         if (node.Children.Count == 0)
         {
-            return node.ElementNumber != 0? 1 : 0;
+            return node.ElementNumber != 0 ? 1 : 0;
         }
 
         var counter = 0;
@@ -136,6 +147,7 @@ public class Trie
         {
             counter += PrefixCounterRecursively(childNode);
         }
+
         return counter;
     }
 
@@ -146,7 +158,7 @@ public class Trie
     /// <returns>Element in trie.</returns>
     public string GetElementByNumber(int number)
     {
-        var element = GetElementByNumberRecursive(number, this._root);
+        var element = GetElementByNumberRecursive(number, this.root);
         return element.Item1;
     }
 
@@ -165,22 +177,20 @@ public class Trie
                 return (edge.Key + element, true);
             }
         }
-        
+
         return ("", false);
     }
-    
+
     /// <summary>
     /// Checks the size of the trie.
     /// </summary>>
     /// <returns>How many elements in trie.</returns>
-    public int Size()
-    {
-        return this.size;
-    }
+    public int Size() => this.size;
 
     private class Node
     {
         public int ElementNumber { set; get; }
+
         public Dictionary<char, Node> Children { get; } = new();
     }
 }
