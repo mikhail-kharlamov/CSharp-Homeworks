@@ -16,7 +16,7 @@ public static class MyLinq
         var number = 3;
         while (true)
         {
-            if (isPrime(number))
+            if (IsPrime(number))
             {
                 yield return number;
             }
@@ -58,7 +58,7 @@ public static class MyLinq
         }
     }
 
-    private static bool isPrime(int number)
+    private static bool IsPrime(int number)
     {
         for (int i = 3; i <= (int)Math.Sqrt(number); i++)
         {
