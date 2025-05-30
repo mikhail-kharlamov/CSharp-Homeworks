@@ -74,10 +74,15 @@ public class SparseVector
     public static SparseVector operator +(SparseVector firstVector, SparseVector secondVector)
     {
         if (firstVector == null || secondVector == null)
+        {
             throw new ArgumentNullException();
+        }
+
         if (firstVector.Dimension != secondVector.Dimension)
+        {
             throw new ArgumentException("Vectors must have the same dimension");
-        
+        }
+
         var result = new SparseVector(firstVector.Dimension);
 
         for (var i = 0; i < firstVector.Dimension; i++)
@@ -99,10 +104,15 @@ public class SparseVector
     public static SparseVector operator -(SparseVector firstVector, SparseVector secondVector)
     {
         if (firstVector == null || secondVector == null)
+        {
             throw new ArgumentNullException();
+        }
+
         if (firstVector.Dimension != secondVector.Dimension)
+        {
             throw new ArgumentException("Vectors must have the same dimension");
-        
+        }
+
         var result = new SparseVector(firstVector.Dimension);
 
         for (var i = 0; i < firstVector.Dimension; i++)
@@ -124,10 +134,15 @@ public class SparseVector
     public static double operator *(SparseVector firstVector, SparseVector secondVector)
     {
         if (firstVector == null || secondVector == null)
+        {
             throw new ArgumentNullException();
+        }
+
         if (firstVector.Dimension != secondVector.Dimension)
+        {
             throw new ArgumentException("Vectors must have the same dimension");
-        
+        }
+
         var result = 0.0;
 
         for (var i = 0; i < firstVector.Dimension; i++)
@@ -145,9 +160,9 @@ public class SparseVector
     /// <exception cref="IndexOutOfRangeException">Thrown when index is out of range</exception>
     private void CheckIndex(int index)
     {
-        if (index < 0 || index >= Dimension)
+        if (index < 0 || index >= this.Dimension)
         {
-            throw new IndexOutOfRangeException($"Index must be between 0 and {Dimension - 1}");
+            throw new IndexOutOfRangeException($"Index must be between 0 and {this.Dimension - 1}");
         }
     }
     
