@@ -1,4 +1,8 @@
-﻿namespace Routers;
+﻿// <copyright file="SparseVector.cs" company="Mikhail Kharlamov">
+// Copyright (c) Mikhail Kharlamov. All rights reserved.
+// </copyright>
+
+namespace Routers;
 
 using UndirectedGraphExtractor;
 using Algorithms;

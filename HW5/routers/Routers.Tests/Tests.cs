@@ -1,4 +1,8 @@
-﻿namespace Routers.Tests;
+﻿// <copyright file="SparseVector.cs" company="Mikhail Kharlamov">
+// Copyright (c) Mikhail Kharlamov. All rights reserved.
+// </copyright>
+
+namespace Routers.Tests;
 
 using UndirectedGraph;
 using Algorithms;
