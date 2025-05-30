@@ -1,5 +1,9 @@
 namespace Calculator;
 
+/// <summary>
+/// Represents the core logic for a calculator with basic arithmetic operations.
+/// Maintains calculator state and performs calculations.
+/// </summary>
 public class CalculatorLogic
 {
     private string displayValue = "0";
@@ -10,8 +14,20 @@ public class CalculatorLogic
 
     private string buffer = "";
 
+    /// <summary>
+    /// Gets the current display value of the calculator.
+    /// </summary>
+    /// <returns>The string representation of the current display value.</returns>
+    /// <remarks>
+    /// Returns "0" if the display value is empty.
+    /// </remarks>
     public string GetDisplay() => string.IsNullOrEmpty(this.displayValue) ? "0" : this.displayValue;
 
+    /// <summary>
+    /// Adds a digit to the current input buffer
+    /// </summary>
+    /// <param name="digit">The digit character to add (0-9).</param>
+    /// <exception cref="ArgumentException">Thrown if the input is not a valid digit.</exception>
     public void AddDigit(char digit)
     {
         if (this.displayValue != "0")
@@ -25,6 +41,11 @@ public class CalculatorLogic
         this.displayValue = this.buffer;
     }
 
+    /// <summary>
+    /// Sets the arithmetic operation to perform.
+    /// </summary>
+    /// <param name="operation">The operation character (+, -, *, /, =).</param>
+    /// <exception cref="ArgumentException">Thrown if the operation is not supported.</exception>
     public void SetOperator(char operation)
     {
         if (!string.IsNullOrEmpty(this.buffer))
@@ -66,6 +87,9 @@ public class CalculatorLogic
         }
     }
 
+    /// <summary>
+    /// Resets the calculator to its initial state.
+    /// </summary>
     public void Clear()
     {
         this.displayValue = "0";
@@ -74,6 +98,11 @@ public class CalculatorLogic
         this.buffer = "";
     }
 
+    /// <summary>
+    /// Performs special calculator operations.
+    /// </summary>
+    /// <param name="operator">The special operation to perform (",", "+/-", "%").</param>
+    /// <exception cref="ArgumentException">Thrown if the operator is not supported.</exception>
     public void SetServiceOperator(string @operator)
     {
         switch (@operator)
