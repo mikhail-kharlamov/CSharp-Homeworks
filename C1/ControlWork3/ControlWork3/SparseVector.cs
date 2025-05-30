@@ -1,4 +1,6 @@
-﻿// Copyright (c) 2025 Mikhail Kharlamov. Licensed under MIT License.
+﻿// <copyright file="SparseVector.cs" company="Mikhail Kharlamov">
+// Copyright (c) Mikhail Kharlamov. All rights reserved.
+// </copyright>
 
 namespace ControlWork3;
 
@@ -11,16 +13,10 @@ public class SparseVector
     private readonly Dictionary<int, double> elements;
 
     /// <summary>
-    /// Gets the dimension (size) of the vector
+    /// Initializes a new instance of the <see cref="SparseVector"/> class.
     /// </summary>
-    /// <value>The number of elements in the vector</value>
-    public int Dimension { get; }
-
-    /// <summary>
-    /// Initializes a new instance of the SparseVector class with specified dimension
-    /// </summary>
-    /// <param name="dimension">The size of the vector (must be greater than zero)</param>
-    /// <exception cref="ArgumentException">Thrown when dimension is less than or equal to zero</exception>
+    /// <param name="dimension">The size of the vector (must be greater than zero).</param>
+    /// <exception cref="ArgumentException">Thrown when dimension is less than or equal to zero.</exception>
     public SparseVector(int dimension)
     {
         if (dimension <= 0)
@@ -28,18 +24,24 @@ public class SparseVector
             throw new ArgumentException("Dimension must be greater than zero", nameof(dimension));
         }
 
-        Dimension = dimension;
-        elements = new Dictionary<int, double>();
+        this.Dimension = dimension;
+        this.elements = new Dictionary<int, double>();
     }
 
     /// <summary>
-    /// Gets or sets the element at the specified index
+    /// Gets the dimension (size) of the vector.
     /// </summary>
-    /// <param name="key">The zero-based index of the element to get or set</param>
-    /// <value>The value at the specified index (returns 0.0 for unset indices)</value>
-    /// <exception cref="IndexOutOfRangeException">Thrown when index is out of range</exception>
+    /// <value>The number of elements in the vector.</value>
+    public int Dimension { get; }
+
+    /// <summary>
+    /// Gets or sets the element at the specified index.
+    /// </summary>
+    /// <param name="key">The zero-based index of the element to get or set.</param>
+    /// <value>The value at the specified index (returns 0.0 for unset indices).</value>
+    /// <exception cref="IndexOutOfRangeException">Thrown when index is out of range.</exception>
     /// <remarks>
-    /// Setting an element to zero (within epsilon tolerance) removes it from sparse storage
+    /// Setting an element to zero (within epsilon tolerance) removes it from sparse storage.
     /// </remarks>
     public double this[int key]
     {
@@ -48,6 +50,7 @@ public class SparseVector
             this.CheckIndex(key);
             return this.elements.TryGetValue(key, out var value) ? value : 0.0;
         }
+
         set
         {
             this.CheckIndex(key);
@@ -64,13 +67,13 @@ public class SparseVector
     }
 
     /// <summary>
-    /// Adds two sparse vectors element-wise
+    /// Adds two sparse vectors element-wise.
     /// </summary>
-    /// <param name="firstVector">First vector to add</param>
-    /// <param name="secondVector">Second vector to add</param>
-    /// <returns>New sparse vector containing the element-wise sum</returns>
-    /// <exception cref="ArgumentNullException">Thrown when either vector is null</exception>
-    /// <exception cref="ArgumentException">Thrown when vectors have different dimensions</exception>
+    /// <param name="firstVector">First vector to add.</param>
+    /// <param name="secondVector">Second vector to add.</param>
+    /// <returns>New sparse vector containing the element-wise sum.</returns>
+    /// <exception cref="ArgumentNullException">Thrown when either vector is null.</exception>
+    /// <exception cref="ArgumentException">Thrown when vectors have different dimensions.</exception>
     public static SparseVector operator +(SparseVector firstVector, SparseVector secondVector)
     {
         if (firstVector == null || secondVector == null)
@@ -89,18 +92,18 @@ public class SparseVector
         {
             result[i] = firstVector[i] + secondVector[i];
         }
-        
+
         return result;
     }
-    
+
     /// <summary>
-    /// Subtracts two sparse vectors element-wise
+    /// Subtracts two sparse vectors element-wise.
     /// </summary>
-    /// <param name="firstVector">Vector to subtract from</param>
-    /// <param name="secondVector">Vector to subtract</param>
-    /// <returns>New sparse vector containing the element-wise difference</returns>
-    /// <exception cref="ArgumentNullException">Thrown when either vector is null</exception>
-    /// <exception cref="ArgumentException">Thrown when vectors have different dimensions</exception>
+    /// <param name="firstVector">Vector to subtract from.</param>
+    /// <param name="secondVector">Vector to subtract.</param>
+    /// <returns>New sparse vector containing the element-wise difference.</returns>
+    /// <exception cref="ArgumentNullException">Thrown when either vector is null.</exception>
+    /// <exception cref="ArgumentException">Thrown when vectors have different dimensions.</exception>
     public static SparseVector operator -(SparseVector firstVector, SparseVector secondVector)
     {
         if (firstVector == null || secondVector == null)
@@ -119,18 +122,18 @@ public class SparseVector
         {
             result[i] = firstVector[i] - secondVector[i];
         }
-        
+
         return result;
     }
-    
+
     /// <summary>
-    /// Computes the dot product of two sparse vectors
+    /// Computes the dot product of two sparse vectors.
     /// </summary>
-    /// <param name="firstVector">First vector in the product</param>
-    /// <param name="secondVector">Second vector in the product</param>
-    /// <returns>The dot product (sum of element-wise products)</returns>
-    /// <exception cref="ArgumentNullException">Thrown when either vector is null</exception>
-    /// <exception cref="ArgumentException">Thrown when vectors have different dimensions</exception>
+    /// <param name="firstVector">First vector in the product.</param>
+    /// <param name="secondVector">Second vector in the product.</param>
+    /// <returns>The dot product (sum of element-wise products).</returns>
+    /// <exception cref="ArgumentNullException">Thrown when either vector is null.</exception>
+    /// <exception cref="ArgumentException">Thrown when vectors have different dimensions.</exception>
     public static double operator *(SparseVector firstVector, SparseVector secondVector)
     {
         if (firstVector == null || secondVector == null)
@@ -149,29 +152,29 @@ public class SparseVector
         {
             result += firstVector[i] * secondVector[i];
         }
-        
+
         return result;
     }
 
     /// <summary>
-    /// Validates that an index is within the valid range for this vector
+    /// Determines whether the vector contains only zero elements.
     /// </summary>
-    /// <param name="index">Index to validate</param>
-    /// <exception cref="IndexOutOfRangeException">Thrown when index is out of range</exception>
+    /// <returns>true if all elements are zero; otherwise, false.</returns>
+    public bool IsZero()
+    {
+        return this.elements.Count == 0;
+    }
+
+    /// <summary>
+    /// Validates that an index is within the valid range for this vector.
+    /// </summary>
+    /// <param name="index">Index to validate.</param>
+    /// <exception cref="IndexOutOfRangeException">Thrown when index is out of range.</exception>
     private void CheckIndex(int index)
     {
         if (index < 0 || index >= this.Dimension)
         {
             throw new IndexOutOfRangeException($"Index must be between 0 and {this.Dimension - 1}");
         }
-    }
-    
-    /// <summary>
-    /// Determines whether the vector contains only zero elements
-    /// </summary>
-    /// <returns>true if all elements are zero; otherwise, false</returns>
-    public bool IsZero()
-    {
-        return this.elements.Count == 0;
     }
 }
