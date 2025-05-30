@@ -1,4 +1,8 @@
-﻿namespace Calculator.Tests;
+﻿// <copyright file="SparseVector.cs" company="Mikhail Kharlamov">
+// Copyright (c) Mikhail Kharlamov. All rights reserved.
+// </copyright>
+
+namespace Calculator.Tests;
 
 using Calculator;
 
