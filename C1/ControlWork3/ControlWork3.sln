@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlWork3", "ControlWork3\ControlWork3.csproj", "{47106E67-5B26-409A-9236-372659E7334F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlWork3.Tests", "ControlWork3.Tests\ControlWork3.Tests.csproj", "{4ADD28E6-CEBA-4979-886A-C586A3FE5C63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47106E67-5B26-409A-9236-372659E7334F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47106E67-5B26-409A-9236-372659E7334F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47106E67-5B26-409A-9236-372659E7334F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47106E67-5B26-409A-9236-372659E7334F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ADD28E6-CEBA-4979-886A-C586A3FE5C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ADD28E6-CEBA-4979-886A-C586A3FE5C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ADD28E6-CEBA-4979-886A-C586A3FE5C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ADD28E6-CEBA-4979-886A-C586A3FE5C63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
