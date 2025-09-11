@@ -1,0 +1,15 @@
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.AssemblyInfoInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.AssemblyInfo.cs
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.csproj.CoreCompileInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.sourcelink.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/bin/Debug/net9.0/FilterMapFold
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/bin/Debug/net9.0/FilterMapFold.deps.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/bin/Debug/net9.0/FilterMapFold.runtimeconfig.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/bin/Debug/net9.0/FilterMapFold.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/bin/Debug/net9.0/FilterMapFold.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/refint/FilterMapFold.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/FilterMapFold.genruntimeconfig.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW7/FilterMapFold/FilterMapFold/obj/Debug/net9.0/ref/FilterMapFold.dll
