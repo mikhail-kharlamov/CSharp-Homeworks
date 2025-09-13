@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VC9rXjXhm4k=",
+  "success": true,
+  "projectFilePath": "/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW5/routers/routers/routers.csproj",
+  "expectedPackageFiles": [
+    "/Users/mikhailkharlamov/.nuget/packages/stylecop.analyzers/1.2.0-beta.435/stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
+    "/Users/mikhailkharlamov/.nuget/packages/stylecop.analyzers.unstable/1.2.0.435/stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
+  ],
+  "logs": []
+}

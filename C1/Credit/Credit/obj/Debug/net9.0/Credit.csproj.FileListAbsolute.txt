@@ -1,0 +1,15 @@
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/bin/Debug/net9.0/Credit
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/bin/Debug/net9.0/Credit.deps.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/bin/Debug/net9.0/Credit.runtimeconfig.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/bin/Debug/net9.0/Credit.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/bin/Debug/net9.0/Credit.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.AssemblyInfoInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.AssemblyInfo.cs
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.csproj.CoreCompileInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.sourcelink.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/refint/Credit.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/Credit.genruntimeconfig.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/Credit/Credit/obj/Debug/net9.0/ref/Credit.dll

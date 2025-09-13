@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2b8b9484-71ef-4c8f-b6a1-73a16f60b43d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/parseTree.Tests/obj/Debug/net9.0/parseTree.Tests.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree.Tests/obj/Debug/net9.0/parseTree.Tests.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree.Tests/obj/Debug/net9.0/parseTree.Tests.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree.Tests/obj/Debug/net9.0/parseTree.Tests.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree.Tests/obj/Debug/net9.0/parseTree.Tests.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree.Tests/obj/Debug/net9.0/parseTree.Tests.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree.Tests/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree.Tests/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree.Tests/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree.Tests/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree/obj/Debug/net9.0/parseTree.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree/obj/Debug/net9.0/parseTree.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree/obj/Debug/net9.0/parseTree.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree/obj/Debug/net9.0/parseTree.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parseTree/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/parseTree/obj/rider.project.restore.info" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/parseTree.Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/53539022a55f40bd95b3200c33b231c074e00/bd/94e41271/WorkItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3f44c5b9eb6851301091fc65ce6dd6671e1a75f8a7f12837bc921ecf12ab/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4743f513c7ddc8411223a46f0ca426ed929391acebcff993721dff2f0c6b34/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dad3f0ebff0dd1f8e1d244c3c44c649be8228d5e25fb37ef1de7f3c0e261c/String.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vXJ44xXaETI4BjHKjCK3pMSzza" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;f183389b-f909-47e2-8692-ed4dba8d8022.executor&quot;: &quot;Debug&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;parseTree&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b8b9484-71ef-4c8f-b6a1-73a16f60b43d" name="Changes" comment="" />
+      <created>1744285290455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744285290455</updated>
+      <workItem from="1744285291519" duration="4756000" />
+      <workItem from="1744313531388" duration="5788000" />
+      <workItem from="1744405447459" duration="29751000" />
+      <workItem from="1744791459783" duration="861000" />
+      <workItem from="1744804743759" duration="2345000" />
+      <workItem from="1745953706125" duration="202000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

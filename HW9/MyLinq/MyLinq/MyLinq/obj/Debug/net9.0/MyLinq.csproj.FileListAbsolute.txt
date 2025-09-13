@@ -1,0 +1,15 @@
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/bin/Debug/net9.0/MyLinq
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/bin/Debug/net9.0/MyLinq.deps.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/bin/Debug/net9.0/MyLinq.runtimeconfig.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/bin/Debug/net9.0/MyLinq.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/bin/Debug/net9.0/MyLinq.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.AssemblyInfoInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.AssemblyInfo.cs
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.csproj.CoreCompileInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.sourcelink.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/refint/MyLinq.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/MyLinq.genruntimeconfig.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/HW9/MyLinq/MyLinq/MyLinq/obj/Debug/net9.0/ref/MyLinq.dll

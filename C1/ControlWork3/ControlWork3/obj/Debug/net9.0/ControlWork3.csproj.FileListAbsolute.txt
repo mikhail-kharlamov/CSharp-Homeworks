@@ -1,0 +1,12 @@
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/bin/Debug/net9.0/ControlWork3.deps.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/bin/Debug/net9.0/ControlWork3.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/bin/Debug/net9.0/ControlWork3.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ControlWork3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ControlWork3.AssemblyInfoInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ControlWork3.AssemblyInfo.cs
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ControlWork3.csproj.CoreCompileInputs.cache
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ControlWork3.sourcelink.json
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ControlWork3.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/refint/ControlWork3.dll
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ControlWork3.pdb
+/Users/mikhailkharlamov/Documents/SPbU/Course1/CSharp-Homeworks/C1/ControlWork3/ControlWork3/obj/Debug/net9.0/ref/ControlWork3.dll
