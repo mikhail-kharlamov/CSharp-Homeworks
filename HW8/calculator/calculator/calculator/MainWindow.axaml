@@ -1,0 +1,130 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Calculator"
+        x:Class="Calculator.MainWindow"
+        Title="Calculator"
+        Width="300" Height="500"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="None"
+        Background="Transparent"
+        FontFamily="SF Pro Display, Segoe UI, Arial">
+    
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+
+    <Border CornerRadius="20" 
+            Background="#2C2C2E" 
+            Margin="10"
+            BoxShadow="0 10 20 #00000030">
+        
+        <StackPanel Margin="15" Spacing="15">
+            <Border CornerRadius="10" Background="#1C1C1E" Padding="15">
+                <TextBlock Text="{Binding Display}" 
+                           FontSize="48"
+                           FontWeight="Light"
+                           Foreground="White"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom"
+                           TextAlignment="Right"/>
+            </Border>
+            
+            <UniformGrid Columns="4" Rows="5" Margin="0 10 0 0">
+                <Button Content="C" Command="{Binding ClearCommand}" 
+                        Classes="GrayButton"/>
+                <Button Content="+/-" Command="{Binding ServiceCommand}"
+                        Classes="GrayButton" CommandParameter="+/-"/>
+                <Button Content="%" Command="{Binding ServiceCommand}" 
+                        Classes="GrayButton" CommandParameter="%"/>
+                <Button Content="÷" Command="{Binding OperatorCommand}" 
+                        Classes="OrangeButton" CommandParameter="/"/>
+                
+                <Button Content="7" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="7"/>
+                <Button Content="8" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="8"/>
+                <Button Content="9" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="9"/>
+                <Button Content="×" Command="{Binding OperatorCommand}" 
+                        Classes="OrangeButton" CommandParameter="*"/>
+                
+                <Button Content="4" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="4"/>
+                <Button Content="5" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="5"/>
+                <Button Content="6" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="6"/>
+                <Button Content="-" Command="{Binding OperatorCommand}" 
+                        Classes="OrangeButton" CommandParameter="-"/>
+                
+                <Button Content="1" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="1"/>
+                <Button Content="2" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="2"/>
+                <Button Content="3" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" CommandParameter="3"/>
+                <Button Content="+" Command="{Binding OperatorCommand}" 
+                        Classes="OrangeButton" CommandParameter="+"/>
+                
+                <Button Content="0" Command="{Binding DigitCommand}" 
+                        Classes="DarkButton" Grid.ColumnSpan="2"
+                        CommandParameter="0"/>
+                <Button Content="," Command="{Binding ServiceCommand}" 
+                        Classes="DarkButton" CommandParameter=","/>
+                <Button Content="=" Command="{Binding OperatorCommand}" 
+                        Classes="OrangeButton" CommandParameter="="/>
+            </UniformGrid>
+        </StackPanel>
+    </Border>
+
+    <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="CornerRadius" Value="50"/>
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+        
+        <Style Selector="Button.GrayButton">
+            <Setter Property="Background" Value="#A5A5A5"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <Style Selector="Button.DarkButton">
+            <Setter Property="Background" Value="#333333"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <Style Selector="Button.OrangeButton">
+            <Setter Property="Background" Value="#FF9F0A"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <Style Selector="Button:pointerover">
+            <Setter Property="Opacity" Value="0.8"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <Style Selector="Button:pressed">
+            <Setter Property="Opacity" Value="0.6"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Styles>
+</Window>
